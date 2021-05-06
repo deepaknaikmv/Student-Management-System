@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="studentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Admin_StudentController">
+   <children>
+      <TabPane layoutY="88.0" prefHeight="693.0" prefWidth="842.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Enroll">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="219.0" layoutY="57.0" prefHeight="473.0" prefWidth="404.0" style="-fx-background-color: #6fd79a;">
+                           <children>
+                              <Label layoutX="15.0" layoutY="91.0" text="Student ID:" />
+                              <TextField fx:id="stid" layoutX="109.0" layoutY="87.0" />
+                              <Text fill="#030303" layoutX="141.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enroll Student" wrappingWidth="134.13671875">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Label layoutX="15.0" layoutY="137.0" text="Student Name:" />
+                              <TextField fx:id="stname" layoutX="109.0" layoutY="133.0" />
+                              <Label layoutX="17.0" layoutY="178.0" text="Password:" />
+                              <Label layoutX="17.0" layoutY="220.0" text="Branch:" />
+                              <Label layoutX="13.0" layoutY="316.0" text="Year of join:" />
+                              <TextField fx:id="year" layoutX="109.0" layoutY="312.0" />
+                              <Label layoutX="15.0" layoutY="354.0" text="Gender:" />
+                              <Button fx:id="enrollButton" layoutX="157.0" layoutY="413.0" mnemonicParsing="false" onAction="#enrollButtonOnAction" prefHeight="25.0" prefWidth="91.0" text="ENROLL" />
+                              <PasswordField fx:id="stpass" layoutX="109.0" layoutY="174.0" />
+                              <RadioButton id="genderRadioButton" fx:id="male" layoutX="109.0" layoutY="354.0" mnemonicParsing="false" text="Male" />
+                              <RadioButton id="genderRadioButton" fx:id="female" layoutX="179.0" layoutY="354.0" mnemonicParsing="false" text="Female" />
+                              <Label layoutX="15.0" layoutY="270.0" text="Section:" />
+                              <ComboBox fx:id="branch" layoutX="109.0" layoutY="216.0" prefWidth="150.0" />
+                              <ComboBox fx:id="section" layoutX="109.0" layoutY="266.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Fee Status">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="235.0" layoutY="63.0" prefHeight="506.0" prefWidth="372.0" style="-fx-background-color: #5790cd;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="135.0" text="Student ID:" />
+                              <TextField fx:id="ssd" layoutX="112.0" layoutY="131.0" />
+                              <Label layoutX="47.0" layoutY="183.0" text="Year:" />
+                              <TextField fx:id="fyear" layoutX="112.0" layoutY="179.0" />
+                              <Button fx:id="fstat" layoutX="122.0" layoutY="228.0" mnemonicParsing="false" onAction="#fstatOnAction" prefHeight="25.0" prefWidth="129.0" text="Find Status" />
+                              <ComboBox fx:id="selstat" layoutX="111.0" layoutY="323.0" prefWidth="150.0" promptText="Change Status" />
+                              <Button fx:id="update" layoutX="122.0" layoutY="363.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="25.0" prefWidth="129.0" text="Update" />
+                              <Text layoutX="57.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View and Update Fee Status">
+                                 <font>
+                                    <Font name="System Bold Italic" size="21.0" />
+                                 </font>
+                              </Text>
+                              <Label fx:id="res" alignment="CENTER" layoutX="149.0" layoutY="270.0" prefHeight="31.0" prefWidth="74.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Update Semester">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="81.0" layoutY="128.0" prefHeight="366.0" prefWidth="261.0" style="-fx-background-color: #bc78e1;">
+                           <children>
+                              <ComboBox fx:id="sem" layoutX="58.0" layoutY="125.0" prefWidth="150.0" promptText="Semester" />
+                              <Button fx:id="promoteButton" layoutX="65.0" layoutY="210.0" mnemonicParsing="false" onAction="#promoteButton" prefHeight="25.0" prefWidth="136.0" text="Promote Students" />
+                              <TextField fx:id="syear" layoutX="58.0" layoutY="159.0" prefHeight="24.0" prefWidth="151.0" promptText="Year" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="495.0" layoutY="128.0" prefHeight="366.0" prefWidth="254.0" style="-fx-background-color: #bc78e1;">
+                           <children>
+                              <Button fx:id="addButton" layoutX="65.0" layoutY="218.0" mnemonicParsing="false" onAction="#addButton" prefHeight="25.0" prefWidth="136.0" text="Add Students" />
+                              <TextField fx:id="ffyear" layoutX="58.0" layoutY="131.0" promptText="Year" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Text fill="#111111" layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" wrappingWidth="81.13671875">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Student_MainController">
+   <children>
+      <AnchorPane prefHeight="897.0" prefWidth="200.0" style="-fx-background-color: #666A68;" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <Button fx:id="homeButton" layoutY="201.0" mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="50.0" prefWidth="201.0" style="-fx-background-color: #666A68;" text="        Home" textFill="#fcfcfc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="feeButton1" layoutX="-1.0" layoutY="344.0" mnemonicParsing="false" onAction="#feeButtonOnAction" prefHeight="50.0" prefWidth="198.0" style="-fx-background-color: #666A68;" text="                Fee Status" textFill="#fcfcfc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="gradeButton1" layoutX="-1.0" layoutY="424.0" mnemonicParsing="false" onAction="#gradeButtonOnAction" prefHeight="50.0" prefWidth="198.0" style="-fx-background-color: #666A68;" text="           Grades" textFill="#fcfcfc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="courseButton1" layoutY="498.0" mnemonicParsing="false" onAction="#coursesButtonOnAction" prefHeight="50.0" prefWidth="198.0" style="-fx-background-color: #666A68;" text="            Courses" textFill="#fcfcfc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="marksButton1" layoutX="-1.0" layoutY="573.0" mnemonicParsing="false" onAction="#marksButtonOnAction" prefHeight="50.0" prefWidth="198.0" style="-fx-background-color: #666A68;" text="         Marks" textFill="#fcfcfc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="profileButton1" layoutY="274.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="50.0" prefWidth="198.0" style="-fx-background-color: #666A68;" text="         Profile" textFill="#fcfcfc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="55.0" fitWidth="48.0" layoutX="21.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/588a66aad06f6719692a2d1d.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="23.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/PngItem_1636458.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="48.0" layoutX="19.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_student-icon-png_1269371.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="48.0" layoutX="19.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/kisspng-report-card-grading-in-education-school-student-5af137e9bd0c12.8417058015257579297744.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_technology-icon-png_8762270.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="48.0" layoutX="27.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/Marks.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="-1.0" prefHeight="173.0" prefWidth="198.0">
+               <children>
+                  <ImageView fitHeight="88.0" fitWidth="124.0" layoutX="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Icons/NicePng_student-icon-png_1268265.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="94.0" fitWidth="80.0" layoutX="106.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Icons/NicePng_student-png_326591%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="uid" alignment="CENTER" layoutX="4.0" layoutY="107.0" prefHeight="25.0" prefWidth="190.0" text="User ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button fx:id="logoutButton" layoutY="846.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" opacity="0.34" prefHeight="50.0" prefWidth="200.0" text="Log out">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="32.0" fitWidth="40.0" layoutX="19.0" layoutY="855.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/pngfind.com-logout-icon-png-5857042.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="attendanceButton1" layoutX="3.0" layoutY="642.0" mnemonicParsing="false" onAction="#attendanceButtonOnAction" prefHeight="50.0" prefWidth="198.0" style="-fx-background-color: #666A68;" text="                Attendance" textFill="#fcfcfc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="55.0" fitWidth="48.0" layoutX="23.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_desk-png_309847.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="6.0" prefHeight="117.0" prefWidth="848.0" style="-fx-background-color: #42A710;" AnchorPane.bottomAnchor="780.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff411f" height="50.0" layoutX="642.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Text fill="#fffefe" layoutX="666.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Area">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="76.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Student Management" wrappingWidth="551.13671875">
+               <font>
+                  <Font name="System Bold Italic" size="42.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="tempPane" layoutX="203.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="842.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c91e1" height="193.0" layoutX="14.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Text fill="#8a8383" layoutX="20.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Control Panel" wrappingWidth="199.99999999999994">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#fcfcfc" layoutX="20.0" layoutY="167.0" stroke="#111111" strokeType="OUTSIDE" strokeWidth="2.0" text="Profile" wrappingWidth="87.13671875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="117.0" fitWidth="129.0" layoutX="114.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/clipart1717870.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="profileButton" layoutX="14.0" layoutY="240.0" mnemonicParsing="false" onAction="#profileButtonOnAction" opacity="0.57" prefHeight="32.0" prefWidth="238.0" text="More info" />
+            <ImageView fitHeight="24.0" fitWidth="40.0" layoutX="163.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3de07f" height="193.0" layoutX="298.0" layoutY="79.0" stroke="#5ba43c" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9fc6e" height="193.0" layoutX="565.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5e48f" height="193.0" layoutX="14.0" layoutY="327.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Text fill="#fcfcfc" layoutX="307.0" layoutY="150.0" stroke="#141414" strokeType="OUTSIDE" strokeWidth="2.0" text="Fee Status" wrappingWidth="100.5029296875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="117.0" fitWidth="129.0" layoutX="402.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/Daco_2869453.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="574.0" layoutY="166.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Grades" wrappingWidth="87.13671875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#fcfcfc" layoutX="20.0" layoutY="422.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Courses" wrappingWidth="100.5029296875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="117.0" fitWidth="129.0" layoutX="661.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/kisspng-computer-icons-checklist-icon-5b259d3a452a56.7548469115291917382833.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="117.0" fitWidth="129.0" layoutX="125.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/clipart1270607.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="feeButton" layoutX="298.0" layoutY="240.0" mnemonicParsing="false" onAction="#feeButtonOnAction" opacity="0.57" prefHeight="32.0" prefWidth="238.0" text="More info" />
+            <ImageView fitHeight="24.0" fitWidth="40.0" layoutX="446.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="gradeButton" layoutX="565.0" layoutY="240.0" mnemonicParsing="false" onAction="#gradeButtonOnAction" opacity="0.57" prefHeight="32.0" prefWidth="238.0" text="More info" />
+            <ImageView fitHeight="24.0" fitWidth="40.0" layoutX="712.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="courseButton" layoutX="14.0" layoutY="488.0" mnemonicParsing="false" onAction="#coursesButtonOnAction" opacity="0.57" prefHeight="32.0" prefWidth="238.0" text="More info" />
+            <ImageView fitHeight="24.0" fitWidth="40.0" layoutX="163.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c63828" height="108.0" layoutX="99.0" layoutY="584.0" stroke="BLACK" strokeType="INSIDE" width="666.0" />
+            <Text fill="#f8f8f8" layoutX="125.0" layoutY="651.0" stroke="#171717" strokeType="OUTSIDE" strokeWidth="4.0" text="Enroll for Course" wrappingWidth="300.13671875">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="108.0" fitWidth="111.0" layoutX="439.0" layoutY="584.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/pnghut_training-icon-online-learning-icon-student-icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="enrollButton" layoutX="618.0" layoutY="584.0" mnemonicParsing="false" onAction="#enrollButtonOnAction" opacity="0.15" prefHeight="108.0" prefWidth="149.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="56.0" fitWidth="48.0" layoutX="669.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_white-arrow-png-transparent_7586854.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e87568" height="193.0" layoutX="565.0" layoutY="327.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Text fill="#fcfcfc" layoutX="574.0" layoutY="421.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Marks" wrappingWidth="87.13671875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="marksButton" layoutX="565.0" layoutY="488.0" mnemonicParsing="false" onAction="#marksButtonOnAction" opacity="0.57" prefHeight="32.0" prefWidth="238.0" text="More info" />
+            <ImageView fitHeight="24.0" fitWidth="40.0" layoutX="714.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="117.0" fitWidth="129.0" layoutX="675.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/m2.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5ae67" height="193.0" layoutX="294.0" layoutY="332.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Text fill="#fcfcfc" layoutX="303.0" layoutY="426.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Attendance" wrappingWidth="149.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="attendanceButton" layoutX="294.0" layoutY="493.0" mnemonicParsing="false" onAction="#attendanceButtonOnAction" opacity="0.57" prefHeight="32.0" prefWidth="238.0" text="More info" />
+            <ImageView fitHeight="24.0" fitWidth="40.0" layoutX="443.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="117.0" fitWidth="129.0" layoutX="424.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/student-attendance-icon-2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

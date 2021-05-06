@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="attendancePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Student_AttendanceController">
+   <children>
+      <Text layoutX="24.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Attendance">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="24.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:" />
+      <Label fx:id="stud_id" layoutX="92.0" layoutY="106.0" text="AM.EN.U4xxxyyy" />
+      <ComboBox fx:id="sem" layoutX="203.0" layoutY="102.0" prefWidth="150.0" promptText="Semester" />
+      <TableView fx:id="attendTable" layoutX="36.0" layoutY="162.0" prefHeight="563.0" prefWidth="792.0">
+         <columns>
+            <TableColumn fx:id="col_courseId" prefWidth="149.59998321533203" text="Course ID" />
+            <TableColumn fx:id="col_courseName" prefWidth="312.0" text="Course Name" />
+            <TableColumn fx:id="col_att" prefWidth="162.39999389648438" text="Attended Class" />
+            <TableColumn fx:id="col_total" prefWidth="163.99993896484375" text="Total Class" />
+         </columns>
+      </TableView>
+      <Button fx:id="getButton" layoutX="384.0" layoutY="102.0" mnemonicParsing="false" onAction="#getButtonOnAction" text="Get Details" />
+      <Label fx:id="semStatus" layoutX="235.0" layoutY="73.0" textFill="#e42020" />
+   </children>
+</AnchorPane>

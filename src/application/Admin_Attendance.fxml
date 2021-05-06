@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="attendancePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Admin_AttendanceController">
+   <children>
+      <ComboBox fx:id="sem" layoutX="207.0" layoutY="94.0" prefWidth="150.0" promptText="Semester" />
+      <TextField fx:id="stud_id" layoutX="45.0" layoutY="94.0" promptText="Student ID" />
+      <TextField fx:id="year" layoutX="387.0" layoutY="94.0" promptText="Year" />
+      <ScrollPane layoutX="45.0" layoutY="151.0" prefHeight="542.0" prefWidth="753.0">
+         <content>
+            <TableView fx:id="attendTable" prefHeight="544.0" prefWidth="755.0">
+              <columns>
+                <TableColumn fx:id="col_courseId" prefWidth="182.40002900362015" text="Course ID" />
+                  <TableColumn fx:id="col_courseName" prefWidth="233.59999084472656" text="Course Name" />
+                <TableColumn fx:id="col_att" minWidth="0.0" prefWidth="145.60000610351562" text="Attended Class" />
+                  <TableColumn fx:id="col_total" minWidth="0.0" prefWidth="176.0" text="Total Class" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="updateButton" layoutX="393.0" layoutY="53.0" mnemonicParsing="false" onAction="#updateButtonOnAction" text="Update" />
+      <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendance">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="getButton" layoutX="561.0" layoutY="94.0" mnemonicParsing="false" onAction="#getButtonOnAction" text="Get Attendance" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="marksPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="218.0" prefWidth="373.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.popupController">
+   <children>
+      <Text fill="#2675d7" layoutX="123.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Finished">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Line endX="272.0" layoutX="101.0" layoutY="51.0" startX="-100.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c3ffb7" height="41.0" layoutX="10.0" layoutY="67.0" stroke="#c3ffb7" strokeType="INSIDE" width="356.0" />
+      <Text fill="#065e11" layoutX="101.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The update was successful!">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="continuee" layoutX="159.0" layoutY="154.0" mnemonicParsing="false" onAction="#continueeButtonOnAction" style="-fx-background-color: #ffffff;" text="Continue" textFill="#00a6ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Text layoutX="115.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="press continue to move on.." />
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="55.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Icons/tick.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
