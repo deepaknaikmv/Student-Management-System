@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="marksPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Student_MarksController">
+   <children>
+      <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marks">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Label layoutX="33.0" layoutY="145.0" text="Student ID:" />
+      <ComboBox fx:id="sem" layoutX="234.0" layoutY="141.0" prefWidth="150.0" promptText="Semester" />
+      <Button fx:id="getButton" layoutX="392.0" layoutY="141.0" mnemonicParsing="false" onAction="#getButtonOnAction" text="Get Details" />
+      <ScrollPane layoutX="8.0" layoutY="180.0" prefHeight="563.0" prefWidth="826.0">
+         <content>
+            <TableView fx:id="markTable" prefHeight="565.0" prefWidth="823.0">
+               <columns>
+                  <TableColumn fx:id="col_courseId" prefWidth="146.0" text="Course ID" />
+                  <TableColumn fx:id="col_courseName" minWidth="4.0" prefWidth="284.0" text="Course Name" />
+                  <TableColumn fx:id="col_P1" prefWidth="135.0" text="P1" />
+                  <TableColumn fx:id="col_P2" prefWidth="133.0" text="P2" />
+                  <TableColumn fx:id="col_End" prefWidth="113.0" text="End" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label fx:id="sid_L" layoutX="113.0" layoutY="145.0" />
+      <Label fx:id="status" layoutX="234.0" layoutY="118.0" prefHeight="16.0" prefWidth="150.0" textFill="RED" />
+   </children>
+</AnchorPane>
