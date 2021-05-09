@@ -201,6 +201,23 @@
                   <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
                </image>
             </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e87568" height="193.0" layoutX="565.0" layoutY="396.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Button fx:id="addAdmin" layoutX="565.0" layoutY="557.0" mnemonicParsing="false" onAction="#addAdminOnAction" opacity="0.57" prefHeight="32.0" prefWidth="238.0" text="More info" />
+            <ImageView fitHeight="24.0" fitWidth="40.0" layoutX="718.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/NicePng_information-technology-icon-png_4281920.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fcfcfc" layoutX="599.0" layoutY="449.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="ADD new Admin" textAlignment="CENTER" wrappingWidth="171.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Label fx:id="slabel" alignment="CENTER" layoutX="585.0" layoutY="508.0" prefHeight="26.0" prefWidth="198.0">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </children>
 </AnchorPane>

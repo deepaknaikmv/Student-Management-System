@@ -84,7 +84,7 @@ public ObservableList<Attendance>  AttendanceList= FXCollections.observableArray
 	@FXML
     public void getButtonOnAction(ActionEvent event) throws IOException
     {
-		attendTable.getItems().removeAll(attendTable.getItems());;
+		attendTable.getItems().removeAll(attendTable.getItems());
     	connectDB obj = new connectDB();
 		connection = obj.get_connection();
 		try
@@ -98,10 +98,19 @@ public ObservableList<Attendance>  AttendanceList= FXCollections.observableArray
 			while(rs1.next()) {
 				String cid = rs1.getString("course_id");
 				String att = rs1.getString("attendance");
-				String[] strAtt = att.split("/");
-				int[] arrAtt = new int[strAtt.length];
-				arrAtt[0] = Integer.parseInt(strAtt[0]);
-				arrAtt[1] = Integer.parseInt(strAtt[1]);
+				int[] arrAtt= new int[2];
+				if(att.equals("NA"))
+				{
+					arrAtt[0]=0;
+					arrAtt[1]=0;
+				}
+				else
+				{
+					String[] strAtt = att.split("/");
+					arrAtt = new int[strAtt.length];
+					arrAtt[0] = Integer.parseInt(strAtt[0]);
+					arrAtt[1] = Integer.parseInt(strAtt[1]);
+				}
 				String query2 ="select name from course_table where course_id= '"+ cid +"';";
 				s2=connection.createStatement();
 				rs2 = s2.executeQuery(query2);
