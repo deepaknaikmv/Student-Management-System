@@ -87,12 +87,14 @@
                               <ComboBox fx:id="sem" layoutX="58.0" layoutY="125.0" prefWidth="150.0" promptText="Semester" />
                               <Button fx:id="promoteButton" layoutX="65.0" layoutY="210.0" mnemonicParsing="false" onAction="#promoteButton" prefHeight="25.0" prefWidth="136.0" text="Promote Students" />
                               <TextField fx:id="syear" layoutX="58.0" layoutY="159.0" prefHeight="24.0" prefWidth="151.0" promptText="Year" />
+                              <Label fx:id="status_2" layoutX="63.0" layoutY="256.0" prefHeight="17.0" prefWidth="136.0" textFill="RED" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="495.0" layoutY="128.0" prefHeight="366.0" prefWidth="254.0" style="-fx-background-color: #bc78e1;">
                            <children>
                               <Button fx:id="addButton" layoutX="65.0" layoutY="218.0" mnemonicParsing="false" onAction="#addButton" prefHeight="25.0" prefWidth="136.0" text="Add Students" />
                               <TextField fx:id="ffyear" layoutX="58.0" layoutY="131.0" promptText="Year" />
+                              <Label fx:id="status_1" layoutX="65.0" layoutY="183.0" prefHeight="17.0" prefWidth="136.0" textFill="RED" />
                            </children>
                         </AnchorPane>
                      </children>

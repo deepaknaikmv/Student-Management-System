@@ -71,6 +71,13 @@ public class Admin_StudentController implements Initializable{
     private Label res;
     
     @FXML
+    private Label status_1;
+    
+    @FXML
+    private Label status_2;
+    
+    
+    @FXML
     private ComboBox<Integer> sem;
     
     @FXML
@@ -215,34 +222,50 @@ public class Admin_StudentController implements Initializable{
 		
 		try
 		{
+			status_2.setText("");
+			String y = "";
+			int curr_sem = -1;
+			int new_sem = -1;
 			
-			int curr_sem = Integer.valueOf(sem.getValue());
-			String y = syear.getText();
-			int new_sem =curr_sem+1;
 			
-			String query5 = "select * from student_sem_year where semester="+curr_sem+" and sem_year=\'"+y+"\'";
-			s5=connection.createStatement();
-			rs5=s5.executeQuery(query5);
-			int x=0;
-			if(rs5.next())
-			{
-				String query = "select * from student_sem_year where semester="+curr_sem+" and sem_year=\'"+y+"\'";
-				s1=connection.createStatement();
-				rs1=s1.executeQuery(query);
-				if((curr_sem!=1) && (new_sem%2!=0)){
-					y = String.valueOf(Integer.valueOf(y)+1);
-				}
-				while(rs1.next()) {
-					if((curr_sem!=1) && new_sem%2!=0) {
-						String query2 = "INSERT INTO fee_status_table VALUES (\'"+rs1.getString(1)+"\', \'"+y+"\');";
-						s3=connection.createStatement();
-						s3.executeUpdate(query2);
-					}
-					String query1 = "INSERT INTO student_sem_year VALUES (\'"+rs1.getString(1)+"\',"+new_sem+", \'"+y+"\');";
-					s2=connection.createStatement();
-					s2.executeUpdate(query1);
-				}
+			if((sem.getValue()==null || syear.getText().isEmpty())){
+				status_2.setText("Invalid Operation");
+				
 			}
+			else {
+				curr_sem = Integer.valueOf(sem.getValue());
+				y = syear.getText();
+				new_sem =curr_sem+1;
+				String query5 = "select * from student_sem_year where semester="+curr_sem+" and sem_year=\'"+y+"\'";
+				s5=connection.createStatement();
+				rs5=s5.executeQuery(query5);
+				int x=0;
+				if(rs5.next())
+				{
+					status_2.setText("");
+					String query = "select * from student_sem_year where semester="+curr_sem+" and sem_year=\'"+y+"\'";
+					s1=connection.createStatement();
+					rs1=s1.executeQuery(query);
+					if((curr_sem!=1) && (new_sem%2!=0)){
+						y = String.valueOf(Integer.valueOf(y)+1);
+					}
+					while(rs1.next()) {
+						if((curr_sem!=1) && new_sem%2!=0) {
+							String query2 = "INSERT INTO fee_status_table VALUES (\'"+rs1.getString(1)+"\', \'"+y+"\');";
+							s3=connection.createStatement();
+							s3.executeUpdate(query2);
+						}
+						String query1 = "INSERT INTO student_sem_year VALUES (\'"+rs1.getString(1)+"\',"+new_sem+", \'"+y+"\');";
+						s2=connection.createStatement();
+						s2.executeUpdate(query1);
+					}
+				}
+				else {
+					status_2.setText("Invalid Operation");
+				}
+				
+			}
+			
 		}
 		catch(Exception e)
 		{
@@ -260,38 +283,47 @@ public class Admin_StudentController implements Initializable{
 		{
 			
 			String y = ffyear.getText();
-			
+			status_1.setText("");
 			String query4="select * from student_sem_year where sem_year= '"+y+"';";
 			s4=connection.createStatement();
-			rs4=s4.executeQuery(query4);
-			int x=0;
-			while(rs4.next())
-			{
-				x++;
+			if(y.isEmpty()) {
+				status_1.setText("Invalid Operation");
 			}
-			if(x==0)
-			{
-				String query1="select student_id from student_table where (select extract(year from year_of_join)='"+ffyear.getText()+"');";
-				s1=connection.createStatement();
-				rs1=s1.executeQuery(query1);
-				int h=0;
-				while (rs1.next()) {
-					h++;
-					String query = "INSERT INTO fee_status_table VALUES (\'"+rs1.getString(1)+"\', \'"+y+"\');";
-					s3=connection.createStatement();
-					s3.executeUpdate(query);
-			        String s = rs1.getString("student_id");
-			        String query2="insert into student_sem_year"+" values ('"+s+"','"+1+"','"+y+"');";
-			        s2=connection.createStatement();
-			        s2.executeUpdate(query2);
-			      }
+			else {
+				rs4=s4.executeQuery(query4);
+				int x=0;
+				while(rs4.next())
+				{
+					x++;
+				}
+				if(x==0)
+				{	
+					
+					String query1="select student_id from student_table where (select extract(year from year_of_join)='"+ffyear.getText()+"');";
+					s1=connection.createStatement();
+					rs1=s1.executeQuery(query1);
+					int h=0;
+					while (rs1.next()) {
+						h++;
+						String query = "INSERT INTO fee_status_table VALUES (\'"+rs1.getString(1)+"\', \'"+y+"\');";
+						s3=connection.createStatement();
+						s3.executeUpdate(query);
+				        String s = rs1.getString("student_id");
+				        String query2="insert into student_sem_year"+" values ('"+s+"','"+1+"','"+y+"');";
+				        s2=connection.createStatement();
+				        s2.executeUpdate(query2);
+				      }
+				}
+				else {
+					status_1.setText("Invalid Operation");
+				}
 			}
+			
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
-		
     }
     
 	public void set(String id)
